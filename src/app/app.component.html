@@ -1,2 +1,13 @@
 <h1>{{title}}</h1>
+
+<mat-form-field>
+  <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+  <ngx-mat-datetime-picker #picker [showSpinners]="true" [showSeconds]="false"
+                           [stepHour]="1" [stepMinute]="1"
+                           [touchUi]="true" [enableMeridian]="false"
+                           [disableMinute]="false" [hideTime]="false">
+  </ngx-mat-datetime-picker>
+</mat-form-field>
+
 <button mat-raised-button color="primary" (click)="send_form()">{{title}}</button>

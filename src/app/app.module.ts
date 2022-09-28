@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatRadioModule} from "@angular/material/radio";
 import {MatButtonModule} from "@angular/material/button";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatInputModule} from "@angular/material/input";
+import {MatNativeDateModule} from "@angular/material/core";
+import {NgxMaterialTimepickerModule} from "ngx-material-timepicker";
+import {NgxMatDatetimePickerModule, NgxMatNativeDateModule} from "@angular-material-components/datetime-picker";
 
 @NgModule({
   declarations: [
@@ -16,7 +21,13 @@ import {MatButtonModule} from "@angular/material/button";
     AppRoutingModule,
     NoopAnimationsModule,
     MatRadioModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDatepickerModule,
+    NgxMatNativeDateModule,
+    MatNativeDateModule,
+    MatInputModule,
+    NgxMaterialTimepickerModule,
+    NgxMatDatetimePickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
