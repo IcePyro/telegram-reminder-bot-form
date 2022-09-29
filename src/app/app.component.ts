@@ -64,7 +64,7 @@ let data: Data = {
 
 function send_form(){
   console.log("Sending Data");
-  Telegram.WebApp.sendData(String(test_data));
+  Telegram.WebApp.sendData(JSON.stringify(test_data));
 }
 
 @Component({
