@@ -9,7 +9,7 @@ enum Repeat {
 
 type Data = {
   dateTime?: Date,
-  repeat: Repeat,
+  repeat: String,
   nthDay?: number,
   weekdays: {
     monday: boolean,
@@ -30,7 +30,7 @@ let test_data : Data = {
   followups: [1,2],
   message: "Service Message",
   nthDay: 0,
-  repeat: Repeat.Never,
+  repeat: Repeat.Never.toString(),
   title: "Nothing",
   weekdays: {
     friday: true,
@@ -46,7 +46,7 @@ let test_data : Data = {
 
 let data: Data = {
   message: "",
-  repeat: Repeat.Never,
+  repeat: Repeat.Never.toString(),
   nthDay: undefined,
   title: "",
   dateTime: undefined,
@@ -75,5 +75,5 @@ function send_form(){
 export class AppComponent {
   title = 'New Reminder';
   send_form = send_form;
-  data = data;
+  data = test_data;
 }
