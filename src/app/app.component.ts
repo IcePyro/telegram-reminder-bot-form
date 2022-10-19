@@ -48,7 +48,7 @@ let test_data: Data = {
 
 let data: Data = {
   message: "",
-  repeat: Repeat.Never.toString(),
+  repeat: "Never",
   nth_day: undefined,
   title: "",
   date_time: undefined,
