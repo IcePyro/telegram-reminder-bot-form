@@ -31,8 +31,8 @@ let test_data: Data = {
   date_time: new Date("04/20/4242"),
   followups: [1, 2],
   message: "Service Message",
-  nth_day: 0,
-  repeat: Repeat.Never.toString(),
+  nth_day: 3,
+  repeat: "Never",
   title: "Nothing",
   weekdays: {
     friday: true,
