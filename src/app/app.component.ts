@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import {NEVER} from "rxjs";
+import {Component} from '@angular/core';
 
 enum Repeat {
   Never,
@@ -8,9 +7,9 @@ enum Repeat {
 }
 
 type Data = {
-  dateTime?: Date,
+  date_time?: Date,
   repeat: String,
-  nthDay?: number,
+  nth_day?: number,
   weekdays: {
     monday: boolean,
     tuesday: boolean,
@@ -20,16 +19,19 @@ type Data = {
     saturday: boolean,
     sunday: boolean,
   },
-  followups : number[],
+  followups: number[],
   message: String,
   title: String,
 }
 
-let test_data : Data = {
-  dateTime: new Date("04/20/4242"),
-  followups: [1,2],
+
+
+
+let test_data: Data = {
+  date_time: new Date("04/20/4242"),
+  followups: [1, 2],
   message: "Service Message",
-  nthDay: 0,
+  nth_day: 0,
   repeat: Repeat.Never.toString(),
   title: "Nothing",
   weekdays: {
@@ -47,11 +49,11 @@ let test_data : Data = {
 let data: Data = {
   message: "",
   repeat: Repeat.Never.toString(),
-  nthDay: undefined,
+  nth_day: undefined,
   title: "",
-  dateTime: undefined,
+  date_time: undefined,
   followups: [],
-  weekdays : {
+  weekdays: {
     monday: false,
     tuesday: false,
     wednesday: false,
@@ -62,7 +64,7 @@ let data: Data = {
   }
 };
 
-function send_form(){
+function send_form() {
   console.log("Sending Data");
   Telegram.WebApp.sendData(JSON.stringify(test_data));
 }
